@@ -5,34 +5,32 @@
 ## 📚 Learning Roadmap
 
 ### 1. Fundamentals (`01-Fundamentals/`)
-- Introduction to Generative AI
-- Understanding Large Language Models (LLMs)
-- Key concepts: tokens, embeddings, transformers
-- Setting up your development environment
+- **01_Intro_to_GenAI.ipynb** - Generative vs Discriminative AI, how LLMs work
+- **01_Intro_to_Tokens.ipynb** - Tokenization with tiktoken, temperature settings
+- Key concepts: tokens, embeddings, context windows
 
 ### 2. Prompt Engineering (`02-Prompt-Engineering/`)
-- Basics of prompt design
+- **02_Prompting_Strategies.ipynb** - Complete prompting guide
 - Zero-shot and few-shot prompting
 - Chain-of-thought prompting
-- Best practices and common patterns
+- System prompts for personality control
 
-### 3. Working with APIs (`03-APIs/`)
-- OpenAI API basics
-- Google Generative AI (Gemini)
-- Managing API keys securely with dotenv
-- Building your first AI-powered application
+### 3. API Interactions (`03-API-Interactions/`)
+- **start.py** - Basic OpenAI API demo
+- **simple_chatbot.py** - CLI chatbot with conversation memory
+- **langchain_memory.ipynb** - LangChain memory management
+- Managing API keys securely with python-dotenv
 
 ### 4. Retrieval-Augmented Generation (`04-RAG/`)
-- Introduction to RAG architecture
-- Vector databases and embeddings
-- Building a simple RAG pipeline
-- Using LangChain for RAG applications
+- **04_RAG_Basics.ipynb** - Complete RAG pipeline tutorial
+- Document loading, chunking, and embeddings
+- Vector storage with ChromaDB
+- Building RAG chains with LCEL
 
 ### 5. Projects (`05-Projects/`)
-- Hands-on projects to apply your learning
-- Building chatbots and assistants
-- Document Q&A systems
-- Real-world GenAI applications
+- **cli_researcher.py** - AI-powered research assistant CLI tool
+- Generates structured Markdown research summaries
+- Extensible with web search (Tavily/Serper)
 
 ## 🛠️ Setup
 
@@ -59,7 +57,12 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-4. Create a `.env` file in the project root:
+4. Create a `.env` file (use `.env.example` as template):
+```bash
+cp .env.example .env
+# Then edit .env with your API keys
+```
+
 ```
 OPENAI_API_KEY=your-openai-api-key
 GOOGLE_API_KEY=your-google-api-key
@@ -69,23 +72,42 @@ GOOGLE_API_KEY=your-google-api-key
 
 Run the basic API demo:
 ```bash
-python 03-APIs/start.py
+python 03-API-Interactions/start.py
+```
+
+Run the interactive chatbot:
+```bash
+python 03-API-Interactions/simple_chatbot.py
+```
+
+Run the research assistant:
+```bash
+python 05-Projects/cli_researcher.py --topic "Artificial Intelligence"
 ```
 
 ## 📁 Project Structure
 
 ```
 Zero-To-GenAI/
-├── 01-Fundamentals/      # Core GenAI concepts
-├── 02-Prompt-Engineering/ # Prompt design techniques
-├── 03-APIs/              # API integration examples
-│   └── start.py          # Basic API call demo
-├── 04-RAG/               # RAG implementations
-├── 05-Projects/          # Hands-on projects
-├── .env                  # API keys (not tracked)
-├── .gitignore            # Git ignore rules
-├── requirements.txt      # Python dependencies
-└── README.md             # This file
+├── 01-Fundamentals/
+│   ├── 01_Intro_to_GenAI.ipynb      # GenAI concepts & LLM basics
+│   └── 01_Intro_to_Tokens.ipynb     # Tokenization & temperature
+├── 02-Prompt-Engineering/
+│   └── 02_Prompting_Strategies.ipynb # Zero/few-shot, CoT, system prompts
+├── 03-API-Interactions/
+│   ├── start.py                      # Basic API demo
+│   ├── simple_chatbot.py             # CLI chatbot with memory
+│   └── langchain_memory.ipynb        # LangChain memory management
+├── 04-RAG/
+│   ├── 04_RAG_Basics.ipynb           # Complete RAG tutorial
+│   └── sample.txt                    # Sample data for RAG demo
+├── 05-Projects/
+│   └── cli_researcher.py             # AI research assistant CLI
+├── .env.example                       # API key template
+├── .env                               # Your API keys (not tracked)
+├── .gitignore                         # Git ignore rules
+├── requirements.txt                   # Python dependencies
+└── README.md                          # This file
 ```
 
 ## 📝 License
@@ -95,3 +117,4 @@ This project is open source and available for learning purposes.
 ## 🤝 Contributing
 
 Contributions are welcome! Feel free to open issues or submit pull requests.
+
