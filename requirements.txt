@@ -1,4 +1,25 @@
-openai>=1.0.0
-langchain>=0.1.0
-google-generativeai>=0.3.0
-python-dotenv>=1.0.0
+# ===========================================
+# Zero-To-GenAI: Requirements for 2025 Beginner Course
+# ===========================================
+
+# --- Core LLM SDKs ---
+openai                  # Official OpenAI Python SDK (GPT-4, GPT-4o, etc.)
+google-generativeai     # Official Google Generative AI SDK (Gemini models)
+
+# --- Modern LangChain Stack ---
+langchain               # Core LangChain framework for building LLM applications
+langchain-openai        # LangChain integration for OpenAI models
+langchain-google-genai  # LangChain integration for Google Gemini models
+langchain-community     # Community integrations (vector stores, tools, etc.)
+
+# --- Environment & Configuration ---
+python-dotenv           # Load environment variables from .env files (API keys)
+
+# --- RAG & Data Processing ---
+chromadb                # Simple, lightweight vector database for embeddings
+pypdf                   # Read and extract text from PDF documents
+tiktoken                # OpenAI's tokenizer for counting tokens accurately
+
+# --- Jupyter Notebooks ---
+notebook                # Jupyter Notebook for interactive development
+ipykernel               # Jupyter kernel for running Python in notebooks
