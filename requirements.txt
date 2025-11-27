@@ -6,11 +6,12 @@
 openai                  # Official OpenAI Python SDK (GPT-4, GPT-4o, etc.)
 google-generativeai     # Official Google Generative AI SDK (Gemini models)
 
-# --- Modern LangChain Stack ---
+# --- Modern LangChain Stack (Split Packages - 2025 Standard) ---
 langchain               # Core LangChain framework for building LLM applications
 langchain-openai        # LangChain integration for OpenAI models
 langchain-google-genai  # LangChain integration for Google Gemini models
-langchain-community     # Community integrations (vector stores, tools, etc.)
+langchain-community     # Community integrations (tools, document loaders, etc.)
+langchain-chroma        # LangChain integration for ChromaDB vector store
 
 # --- Environment & Configuration ---
 python-dotenv           # Load environment variables from .env files (API keys)
@@ -21,5 +22,7 @@ pypdf                   # Read and extract text from PDF documents
 tiktoken                # OpenAI's tokenizer for counting tokens accurately
 
 # --- Jupyter Notebooks ---
-notebook                # Jupyter Notebook for interactive development
+jupyter                 # Full Jupyter ecosystem (notebook, lab, console)
+notebook                # Classic Jupyter Notebook interface
 ipykernel               # Jupyter kernel for running Python in notebooks
+
