@@ -26,3 +26,7 @@ jupyter                 # Full Jupyter ecosystem (notebook, lab, console)
 notebook                # Classic Jupyter Notebook interface
 ipykernel               # Jupyter kernel for running Python in notebooks
 
+# --- Web UI (Project Enhancement) ---
+streamlit               # The fastest way to build data apps
+
+

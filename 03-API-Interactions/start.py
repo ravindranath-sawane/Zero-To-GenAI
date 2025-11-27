@@ -35,7 +35,7 @@ client = OpenAI(api_key=api_key)
 # Make a basic API call
 try:
     response = client.chat.completions.create(
-        model="gpt-3.5-turbo",
+        model="gpt-4o-mini",  # Updated to modern cost-effective model
         messages=[
             {"role": "system", "content": "You are a helpful assistant."},
             {"role": "user", "content": "Hello! What is Generative AI in one sentence?"}

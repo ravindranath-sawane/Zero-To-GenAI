@@ -29,8 +29,14 @@
 
 ### 5. Projects (`05-Projects/`)
 - **cli_researcher.py** - AI-powered research assistant CLI tool
+- **web_chatbot.py** - Modern web-based chatbot using Streamlit
 - Generates structured Markdown research summaries
 - Extensible with web search (Tavily/Serper)
+
+### 6. Agents (`06-Agents/`)
+- **06_Intro_to_Agents.ipynb** - Building autonomous agents with tools
+- Understanding the Think-Act-Observe loop
+- Creating custom tools with LangChain
 
 ## 🛠️ Setup
 
@@ -85,6 +91,11 @@ Run the research assistant:
 python 05-Projects/cli_researcher.py --topic "Artificial Intelligence"
 ```
 
+Run the web chatbot:
+```bash
+streamlit run 05-Projects/web_chatbot.py
+```
+
 ## 📁 Project Structure
 
 ```
@@ -102,7 +113,10 @@ Zero-To-GenAI/
 │   ├── 04_RAG_Basics.ipynb           # Complete RAG tutorial
 │   └── sample.txt                    # Sample data for RAG demo
 ├── 05-Projects/
-│   └── cli_researcher.py             # AI research assistant CLI
+│   ├── cli_researcher.py             # AI research assistant CLI
+│   └── web_chatbot.py                # Streamlit web chatbot
+├── 06-Agents/
+│   └── 06_Intro_to_Agents.ipynb      # Introduction to AI Agents
 ├── .env.example                       # API key template
 ├── .env                               # Your API keys (not tracked)
 ├── .gitignore                         # Git ignore rules
